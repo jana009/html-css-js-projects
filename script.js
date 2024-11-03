@@ -1,7 +1,9 @@
 //document.getElementById('ppl-count').innerText=5;
 let saveEl = document.getElementById('save-el');
 let countEl = document.getElementById('ppl-count');
+let sumEl = document.getElementById('sum-el');
 let count =0;
+let sum=0;
 
 function increment(){
     count++;
@@ -9,11 +11,16 @@ function increment(){
 }
 function save(){
     console.log(count);
-    let entries = count + " - "
+    sum+=count;
+    let entries = count + " - ";
     saveEl.textContent+=entries;
+    sumEl.textContent = sum;
     count =0;
     countEl.textContent=count;
 }
+
+
+
 
 // function increment(){
 //     let initialCount = document.getElementById("ppl-count").innerText;
